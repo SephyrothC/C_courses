@@ -5,11 +5,12 @@
 
 ___
 
->card on the C language from the Open Classroom course ( https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/13300-vous-avez-dit-programmer ). 
+> Card on the C language from the [Open Classroom] ( https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/13300-vous-avez-dit-programmer ) course . 
 
 ___
 
-####  code minimaliste :
+####  Code minimaliste :
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -30,7 +31,7 @@ int main()
 |`debut & fin commentaire`|/* & *\|
 ```
 
-#### variable :
+#### Variable :
 
 |'Nom du type'|*Min*|*Max*|
 | :--------: |:-----:|:-----:|
@@ -162,7 +163,7 @@ else // Sinon...
 |`OU`|`||`|
 |`NON`|`!`|
 
-#### ex :
+#### Exemple :
 
 ```c
 if (age > 18 && age < 25);
