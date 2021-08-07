@@ -134,7 +134,8 @@ if (age >= 18) // Si l'âge est supérieur ou égal à 18
 else // Sinon...
 {
   printf ("Ah c'est bete, vous etes mineur !");
-}```
+}
+```
 
 #### else if:
 
@@ -150,7 +151,8 @@ else if ( age > 4 ) // Sinon, si l'âge est au moins supérieur à 4
 else // Sinon...
 {
   printf ("Aga gaa aga gaaa"); // Langage bébé, vous pouvez pas comprendre
-}```
+}
+```
 
 #### plusieur condition a la fois
 
