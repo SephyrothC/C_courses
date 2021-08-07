@@ -40,16 +40,16 @@ int main()
 |'float'|-1 x1037|1 x1037|
 |'double'|-1 x1037|1 x1037|
 
-> Généralement on utilise pour un nombre entier : ```int```int et pour un flottant un ```double```
+> Généralement on utilise pour un nombre entier : ```int``` et pour un flottant un ```double```
 
 #### ❗ Attention : 
 > Les trois premiers types (signed char,int,long) permettent de stocker des nombres entiers :
 Les deux derniers (float,double) permettent de stocker des nombres décimaux (appelés nombres flottants) : 13.8, 16.911…
 
-> unsigned est un mot clée permetant de stoquer que des nombre possitif 
+> ```unsigned``` est un mot clée permetant de stoquer que des nombre possitif 
 const pour déclarer une constante
 
-> afficher le contenu d'une variable :
+#### Afficher le contenu d'une variable :
 
 ``` printf("il vous reste %d vies rt vous etes au niveau", nombre_de_vies, niveau);```
 
@@ -80,9 +80,12 @@ nombre %= 3;
 
 #### La bibliothèque mathématique
 
+``` c
 #include <maths.h>
+```
 
-#### attention tous est en bouble
+#### ❗ Attention tous est en bouble
+
 |'But'|*Fonction*|
 | :--------: |:-----:|
 |`valeur absolue`|fabs(value)|
@@ -160,9 +163,9 @@ else // Sinon...
 #### ex :
 
 ```c
-if (age > 30 || argent > 100000)
-if (age > 30 || argent > 100000)
-if (age == 18)
+if (age > 18 && age < 25);
+if (age > 30 || argent > 100000);
+if (!(age < 18));
 ```
 
 #### Bouléen :
