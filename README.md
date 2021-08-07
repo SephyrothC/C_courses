@@ -5,7 +5,7 @@
 
 ___
 
-> Card on the C language from the [Open Classroom](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/13300-vous-avez-dit-programmer) course . 
+> Card on the C language from the [Open Classroom](https://github.com/fareanor3/C_courses/blob/e5c10bb83f72568782022b9df525565999583c23/banner.jpg) course . 
 
 ___
 
