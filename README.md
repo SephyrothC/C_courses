@@ -20,6 +20,7 @@ int main()
   printf("Bonjour");
   return 0;
 }
+```
 
 |'But'|*Fonction*|
 | :--------: |:-----:|
@@ -29,7 +30,7 @@ int main()
 |`tabulation`|\t|
 |`commentaire`|//|
 |`debut & fin commentaire`|/* & *\|
-```
+
 
 #### Variable :
 
@@ -44,15 +45,17 @@ int main()
 > Généralement on utilise pour un nombre entier : ```int``` et pour un flottant un ```double```
 
 #### ❗ Attention : 
-> Les trois premiers types (signed char,int,long) permettent de stocker des nombres entiers :
-Les deux derniers (float,double) permettent de stocker des nombres décimaux (appelés nombres flottants) : 13.8, 16.911…
+> Les trois premiers types (```signed char```,```int```,```long```) permettent de stocker des nombres entiers :
+Les deux derniers (```float```,```double```) permettent de stocker des nombres décimaux (appelés nombres flottants) : 13.8, 16.911…
 
 > ```unsigned``` est un mot clée permetant de stoquer que des nombre possitif 
-const pour déclarer une constante
+```const``` pour déclarer une constante
 
 #### Afficher le contenu d'une variable :
 
-``` printf("il vous reste %d vies rt vous etes au niveau", nombre_de_vies, niveau);```
+```c
+printf("il vous reste %d vies rt vous etes au niveau", nombre_de_vies, niveau);
+```
 
 |'Format'|*Type attendu*|
 | :--------: |:-----:|
@@ -85,7 +88,7 @@ nombre %= 3;
 #include <maths.h>
 ```
 
-#### ❗ Attention tous est en bouble
+#### ❗ Attention tous est en ```bouble```
 
 |'But'|*Fonction*|
 | :--------: |:-----:|
