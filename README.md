@@ -74,7 +74,7 @@ printf("il vous reste %d vies et vous etes au niveau", nombre_de_vies, niveau);
 
 #### Incremetation
 
-``` c
+```C
 nombre ++ ;
 nombre += 4;
 nombre -= 3;
@@ -83,7 +83,7 @@ nombre /= 3;
 nombre %= 3;
 ```
 
-#### La bibliothèque mathématique
+### La bibliothèque mathématique
 
 ``` c
 #include <maths.h>
@@ -120,9 +120,10 @@ nombre %= 3;
 |`inférieur ou égal`|<=|
 |`est different de`|!=|
 
+### Conditions : 
 #### if : 
 
-```c
+```C
 if (/* Votre condition */)
 {
   // Instructions à exécuter si la condition est vraie
@@ -131,7 +132,7 @@ if (/* Votre condition */)
 
 #### else :
 
-```c
+```C
 if (age >= 18) // Si l'âge est supérieur ou égal à 18
 {
   printf ("Vous etes majeur !");
@@ -335,5 +336,28 @@ void jouer(SDL_Surface* ecran)
 
 ![Diagrame de compilation](https://github.com/fareanor3/C_courses/blob/385108c170665d7bcfaf8d317eeee2bc0f72441f/compilation%20diagram.png)
 
+#### La portée d'une fonction
 
-#### La portée des fonctions et variables
+> Une variable déclarée dans une fonction est supprimée à la fin de la fonction, elle n'est accessible que dans cette fonction.
+
+> Une variable déclarée dans une fonction avec le mot-clé ```static``` devant n'est pas supprimée à la fin de la fonction, elle conserve sa valeur au fur et à mesure de l'exécution du programme.
+
+> Une variable déclarée en dehors des fonctions est une variable globale, accessible depuis toutes les fonctions de tous les fichiers source du projet.
+
+> Une variable globale avec le mot-clé ```static``` devant est globale uniquement dans le fichier dans lequel elle se trouve, elle n'est pas accessible depuis les fonctions des autres fichiers.
+
+> Une fonction est par défaut accessible depuis tous les fichiers du projet, on peut donc l'appeler depuis n'importe quel autre fichier.
+
+> Si on veut qu'une fonction ne soit accessible que dans le fichier dans lequel elle se trouve, il faut rajouter le mot-clé ```static``` devant.
+
+```C
+static int resultat = 0;
+static int triple(int nombre)
+{
+    // Instructions
+}
+```
+#### ❗ Attention mettre à jour le prototype
+```H
+static int triple(int nombre);
+```
