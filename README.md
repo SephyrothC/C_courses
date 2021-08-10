@@ -54,7 +54,7 @@ Les deux derniers (```float```,```double```) permettent de stocker des nombres d
 #### Afficher le contenu d'une variable :
 
 ```c
-printf("il vous reste %d vies rt vous etes au niveau", nombre_de_vies, niveau);
+printf("il vous reste %d vies et vous etes au niveau", nombre_de_vies, niveau);
 ```
 
 |'Format'|*Type attendu*|
@@ -75,6 +75,7 @@ printf("il vous reste %d vies rt vous etes au niveau", nombre_de_vies, niveau);
 #### Incremetation
 
 ``` c
+nombre ++ ;
 nombre += 4;
 nombre -= 3;
 nombre *= 5;
@@ -244,6 +245,93 @@ int compteur;
 
 for (compteur = 0 ; compteur < 10 ; compteur++)
 {
-    printf("Salut les Zeros !\n");
+  printf("Salut les Zeros !\n");
 }
 ```
+
+#### Tirer un nomnbre au hasard
+
+```c
+// ajouter
+#include <time.h>
+
+const int MAX = 100, MIN = 1;
+
+srand(time(NULL)); // strand() inicialise le compteur de nombre aléatoire
+nombreMystere = (rand() % (MAX - MIN + 1)) + MIN; //rand() génère un nombre au hasard entre 1 et 100
+```
+
+### Les fonctions
+
+#### schéma d'une fonction
+```c
+type nomFonction(parametres)
+{
+    // Insérez vos instructions ici
+}
+```
+
+#### code menu
+```c
+int menu()
+{
+    int choix = 0;
+    while (choix < 1 || choix > 4)
+    {
+        printf("Menu :\n");
+        printf("1 : Poulet de dinde aux escargots rotis a la sauce bearnaise\n");
+        printf("2 : Concombres sucres a la sauce de myrtilles enrobee de chocolat\n");
+        scanf("%d", &choix);
+    }    
+    return choix;
+}    
+int main(int argc, char *argv[])
+{    
+    switch (menu()) \\ récupère directement le choix utilisateur
+    {
+        case 1:
+            printf("Vous avez pris le poulet\n");
+            break;
+        case 2:
+            printf("Vous avez pris les concombres\n");
+            break;  
+    return 0;
+}
+```
+
+### La programmation modulaire
+
+> A chaque fois que vous faites appel à une fonction X dans un fichier, il faut que vous ayez inclus les prototypes de cette fonction dans votre fichier. Cela permet au compilateur de vérifier si vous l'avez correctement appelée.
+> Quand dans votre code vous faites appel à une fonction, votre ordinateur doit déjà la connaître, savoir combien de paramètres elle prend, etc.
+
+#### ❗ Attention : 
+
+On met rarement les headers avec les fichiers c. 
+
+#### Les signes
+
+> Les chevrons< > pour inclure un fichier se trouvant dans le répertoire « include » de votre IDE ;
+> Les guillemets" " pour inclure un fichier se trouvant dans le répertoire de votre projet (à côté des.c, généralement).
+
+#### Dans le fichier C
+
+```c
+#include <stdlib.h>
+#include <stdio.h>
+#include "jeu.h"
+
+void jouer(SDL_Surface* ecran)
+{
+// ...
+```
+#### Dans le fichier H
+```h
+    void jouer(SDL_Surface* ecran);
+    void deplacerJoueur(int carte[][NB_BLOCS_HAUTEUR], SDL_Rect *pos, int direction);
+    void deplacerCaisse(int *premiereCase, int *secondeCase);
+```
+
+#### Diagrame de compilation
+
+
+![Diagrame de compilation]()
