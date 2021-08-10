@@ -331,7 +331,8 @@ void jouer(SDL_Surface* ecran)
     void deplacerCaisse(int *premiereCase, int *secondeCase);
 ```
 
-#### Diagrame de compilation
+#### La compilation séparée
+
+![Diagrame de compilation](https://github.com/fareanor3/C_courses/blob/e02e06d46b3eeac32e9f2e6d100afcfc7ca479e7/compilation%20diagram.png)
 
 
-![Diagrame de compilation]()
