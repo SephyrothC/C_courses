@@ -333,6 +333,7 @@ void jouer(SDL_Surface* ecran)
 
 #### La compilation séparée
 
-![Diagrame de compilation](https://github.com/fareanor3/C_courses/blob/e02e06d46b3eeac32e9f2e6d100afcfc7ca479e7/compilation%20diagram.png)
+![Diagrame de compilation](https://github.com/fareanor3/C_courses/blob/385108c170665d7bcfaf8d317eeee2bc0f72441f/compilation%20diagram.png)
 
 
+#### La portée des fonctions et variables
