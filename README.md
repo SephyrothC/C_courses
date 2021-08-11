@@ -361,3 +361,19 @@ static int triple(int nombre)
 ```H
 static int triple(int nombre);
 ```
+
+#### Les pointeurs
+
+```C
+printf("L'adresse de la variable age est : %p", &age); // &age: désigne l'adresse de la variable. et %p designe l'adresse
+```
+
+> variable de type pointeur, rajouter ```*```devant le nom de la variable.
+```C
+int *monPointeur = NULL;
+```
+> Dans le code :
+```C
+int age = 10;
+int *pointeurSurAge = &age;
+```
