@@ -373,7 +373,39 @@ printf("L'adresse de la variable age est : %p", &age); // &age: désigne l'adres
 int *monPointeur = NULL;
 ```
 > Dans le code :
-```C
+```c
 int age = 10;
 int *pointeurSurAge = &age;
 ```
+
+#### Envoyer un pointeur à une fonction
+
+```C
+void triplePointeur(int *pointeurSurNombre);
+
+int main(int argc, char *argv[])
+{
+    int nombre = 5;
+
+    triplePointeur(&nombre); // On envoie l'adresse de nombre à la fonction
+    printf("%d", nombre); // On affiche la variable nombre. La fonction a directement modifié la valeur de la variable car elle connaissait son adresse
+
+    return 0;
+}
+
+void triplePointeur(int *pointeurSurNombre)
+{
+    *pointeurSurNombre *= 3; // On multiplie par 3 la valeur de nombre
+}
+```
+> Output:
+```
+15
+```
+
+> Si on place un symbole ```&``` devant un nom de variable, on obtient son adresse au lieu de sa valeur (ex. :&age).
+
+> Si on place un symbole ```*``` devant un nom de pointeur, on obtient la valeur de la variable stockée à l'adresse indiquée par le pointeur.
+
+> Les pointeurs constituent une notion essentielle du langage C, mais néanmoins un peu complexe au début. Il faut prendre le temps de bien comprendre comment ils fonctionnent car beaucoup d'autres notions sont basées dessus.
+
