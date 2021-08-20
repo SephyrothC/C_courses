@@ -409,3 +409,6 @@ void triplePointeur(int *pointeurSurNombre)
 
 > Les pointeurs constituent une notion essentielle du langage C, mais néanmoins un peu complexe au début. Il faut prendre le temps de bien comprendre comment ils fonctionnent car beaucoup d'autres notions sont basées dessus.
 
+#### Tableau
+
+> int tableau[4] = {0}; // Toutes les cases du tableau seront initialisées à 0
