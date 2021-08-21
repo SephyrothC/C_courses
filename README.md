@@ -410,5 +410,44 @@ void triplePointeur(int *pointeurSurNombre)
 > Les pointeurs constituent une notion essentielle du langage C, mais néanmoins un peu complexe au début. Il faut prendre le temps de bien comprendre comment ils fonctionnent car beaucoup d'autres notions sont basées dessus.
 
 #### Tableau
+```c
+int tableau[4] = {0}; // Toutes les cases du tableau seront initialisées à 0
+```
 
-> int tableau[4] = {0}; // Toutes les cases du tableau seront initialisées à 0
+#### ❗ Attention chose a ne surtout pas faire pour aider le compilateur :
+```c
+int taille = 5;
+int tableau[taille];
+```
+
+> boucle d'affichage des valeurs
+
+```C
+for (i = 0 ; i < 4 ; i++)
+{
+  printf("%d\n", tableau[i]);
+}
+```
+
+#### Les chaînes de caractères
+
+> Le type ```char``` est en fait prévu pour stocker UNE lettre
+
+> La fonction ```printf``` peut aussi afficher un caractère. Pour cela, on doit utiliser le symbole ```%c``` (c comme caractère) : 
+
+> On utilise donc les apostrophes pour obtenir la valeur d'une lettre.
+
+Exemple de code de saisie claivier: 
+```C
+int main(int argc, char *argv[])
+{
+    char lettre = 0;
+
+    scanf("%c", &lettre);
+    printf("%c\n", lettre);
+
+    return 0;
+}
+```
+
+![chaine_de_characère]()
