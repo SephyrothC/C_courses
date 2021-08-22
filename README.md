@@ -1,4 +1,4 @@
-![banner](https://raw.githubusercontent.com/fareanor3/C_courses/main/banner.jpg?token=AOSHXRWF3YD6RADHQ6HIPY3BDAR7U)
+![banner](https://github.com/fareanor3/C_courses/blob/5e58730c84283c11864b52350b6233b3947dafa7/banner.jpg)
 # C_courses
 
 ##  Mind the openclassroom courses
@@ -334,7 +334,7 @@ void jouer(SDL_Surface* ecran)
 
 #### La compilation séparée
 
-![Diagrame de compilation](https://github.com/fareanor3/C_courses/blob/385108c170665d7bcfaf8d317eeee2bc0f72441f/compilation%20diagram.png)
+![Diagrame de compilation](https://github.com/fareanor3/C_courses/blob/5e58730c84283c11864b52350b6233b3947dafa7/compilation%20diagram.png)
 
 #### La portée d'une fonction
 
@@ -450,4 +450,107 @@ int main(int argc, char *argv[])
 }
 ```
 
-![chaine_de_characère]()
+![chaine_de_characère](https://github.com/fareanor3/C_courses/blob/5e58730c84283c11864b52350b6233b3947dafa7/representation%20de%20la%20chaine%20de%20caract%C3%A8re%20salut%20en%20memoire.png)
+
+Pour initialiser une chaîne
+```C
+int main(int argc, char *argv[])
+{
+    char chaine[] = "Salut"; // La taille du tableau chaine est automatiquement calculée
+
+    printf("%s", chaine);
+
+    return 0;
+}
+```
+❗ Attention
+> Ca ne marche que pour l'initialisation ! Vous ne pouvez pas écrire plus loin dans le code :
+```C
+chaine = "Salut";
+```
+#### Récupération d'une chaîne via un ```scanf```
+```c
+int main(int argc, char *argv[])
+{
+    char prenom[100];
+
+    printf("Comment t'appelles-tu petit Zero ? ");
+    scanf("%s", prenom);
+    printf("Salut %s, je suis heureux de te rencontrer !", prenom);
+
+    return 0;
+}
+```
+#### Fonctions de manipulation des chaînes
+
+```c
+#include <string.h>`
+```
+```strlen``` : calculer la longueur d'une chaîne (sans compter le caractère ```\0```)
+```c
+size_t strlen(const char* chaine); // size_t un type spécial qui signifie que la fonction renvoie un nombre correspondant à une taille. 
+```
+```c
+int main(int argc, char *argv[])
+{
+    char chaine[] = "Salut";
+    int longueurChaine = 0;
+
+    // On récupère la longueur de la chaîne dans longueurChaine
+    longueurChaine = strlen(chaine);
+
+    // On affiche la longueur de la chaîne
+    printf("La chaine %s fait %d caracteres de long", chaine, longueurChaine);
+
+    return 0;
+}
+````
+```strcpy``` (comme « string copy ») permet de copier une chaîne à l'intérieur d'une autre.
+> son prototype est :
+```h
+char* strcpy(char* copieDeLaChaine, const char* chaineACopier);
+```
+exemple:
+```C
+int main(int argc, char *argv[])
+{
+    /* On crée une chaîne "chaine" qui contient un peu de texte
+    et une copie (vide) de taille 100 pour être sûr d'avoir la place
+    pour la copie */
+    
+    char chaine[] = "Texte", copie[100] = {0};// on met 100 pour avoir de la place
+
+    strcpy(copie, chaine); // On copie "chaine" dans "copie"
+
+    // Si tout s'est bien passé, la copie devrait être identique à chaine
+    printf("chaine vaut : %s\n", chaine);
+    printf("copie vaut : %s\n", copie);
+
+    return 0;
+}
+```
+
+```strcat``` ajoute une chaîne à la suite d'une autre :
+> son prototype est :
+```h
+char* strcat(char* chaine1, const char* chaine2);
+```
+exemple:
+```C
+int main(int argc, char *argv[])
+{
+    /* On crée 2 chaînes. chaine1 doit être assez grande pour accueillir
+    le contenu de chaine2 en plus, sinon risque de plantage */
+    char chaine1[100] = "Salut ", chaine2[] = "Mateo21";
+
+    strcat(chaine1, chaine2); // On concatène chaine2 dans chaine1. Attention à la taille de la chaine qui ressoit !
+
+    // Si tout s'est bien passé, chaine1 vaut "Salut Mateo21"
+    printf("chaine1 vaut : %s\n", chaine1);
+    // chaine2 n'a pas changé :
+    printf("chaine2 vaut toujours : %s\n", chaine2);
+
+    return 0;
+}
+```
+
