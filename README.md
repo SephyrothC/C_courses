@@ -86,7 +86,7 @@ nombre %= 3;
 ### La bibliothèque mathématique
 
 ``` c
-#include <maths.h>
+#include <math.h>
 ```
 
 #### ❗ Attention tous est en ```bouble```
@@ -553,4 +553,52 @@ int main(int argc, char *argv[])
     return 0;
 }
 ```
+```strcmp``` comparer 2 chaînes :
+> Son prototype est :
+```h
+int strcmp(const char* chaine1, const char* chaine2);
+```
 
+#### ❗ Attention : 
+
+> Si tous les caractères sont identiques, elle renvoie 0. Si les caractères de lachaine1sont supérieurs à ceux de lachaine2, la fonction renvoie un nombre positif. Si c'est l'inverse, la fonction renvoie un nombre négatif. Dans la pratique, on se sert surtout destrcmppour vérifier si 2 chaînes sont identiques ou non.
+
+exemple:
+```C
+int main(int argc, char *argv[])
+{
+    char chaine1[] = "Texte de test", chaine2[] = "Texte de test";
+
+    if (strcmp(chaine1, chaine2) == 0) // Si chaînes identiques
+    {
+        printf("Les chaines sont identiques\n");
+    }
+    else
+    {
+        printf("Les chaines sont differentes\n");
+    }
+
+    return 0;
+}
+```
+```strchr``` rechercher un caractère :
+> Son prototype est :
+```h
+char* strchr(const char* chaine, int caractereARechercher);
+```
+exemple:
+```C
+int main(int argc, char *argv[])
+{
+    char chaine[] = "Texte de test", *suiteChaine = NULL;
+
+    suiteChaine = strchr(chaine, 'd');
+    if (suiteChaine != NULL) // Si on a trouvé quelque chose
+    {
+        printf("Voici la fin de la chaine a partir du premier d : %s", suiteChaine);
+    }
+
+    return 0;
+}
+```
+![strch](https:)
